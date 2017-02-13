@@ -1,7 +1,8 @@
 @extends('layouts.master')
 
 @section('content')
-
-<h1>This is feature single post page</h1>
-
+<div class="col-12 col-md-9">
+    <h1>{{ $post->title}}</h1>
+    <p>{{ $post->body }}</p>
+</div>
 @endsection
