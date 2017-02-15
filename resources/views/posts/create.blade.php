@@ -14,7 +14,6 @@
 
         <button type="submit" class="btn btn-primary">Submit</button>
         @include('layouts.errors')
-
     </form>
 </div>
 @endsection
