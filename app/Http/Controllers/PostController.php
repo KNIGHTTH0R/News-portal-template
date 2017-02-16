@@ -36,7 +36,8 @@ class PostController extends Controller
 
        Post::create([
            'title' => request('post-title'),
-           'body' => request('post-body')
+           'body' => request('post-body'),
+           'user_id' => $post->user->id
        ]);
 
         return redirect('/');

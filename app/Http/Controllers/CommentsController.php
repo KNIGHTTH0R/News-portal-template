@@ -9,6 +9,10 @@ use App\Post;
 
 class CommentsController extends Controller
 {
+
+    public function __construct(){
+        $this->middleware('auth');
+    }
     public function create()
     {
 
@@ -23,7 +27,8 @@ class CommentsController extends Controller
 
         Comments::create([
             'post_id'=> $post->id,
-            'body' => request('comment-body')
+            'body' => request('comment-body'),
+            'user_id' => auth()->id()
         ]);
 
         return back();
